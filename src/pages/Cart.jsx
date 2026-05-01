@@ -1,6 +1,6 @@
 import React from "react";
 
-function Cart() {
+function Cart({ cart }) {
   return (
     <div id="books__body">
       <div id="books__main">

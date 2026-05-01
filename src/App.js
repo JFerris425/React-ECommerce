@@ -12,7 +12,7 @@ function App() {
   const [cart, setCart] = useState([]);
 
   function addToCart(book) {
-    setCart(...cart, book)
+    setCart((cart) => [...cart, book])
   }
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function App() {
             path="/books/:id"
             element={<BookInfo books={books} addToCart={addToCart} />}
           />
-          <Route path="/cart" element={<Cart books={books} />} />
+          <Route path="/cart" element={<Cart cart={cart} />} />
         </Routes>
         <Footer />
       </div>
